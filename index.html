@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="res/ico/doge.ico">
+        <link rel="stylesheet" href="styles/css/base.css">
+        <link rel="stylesheet" href="styles/css/home-content.css">
+        <link rel="stylesheet" href="styles/css/about-me-content.css">
+        <link rel="stylesheet" href="styles/css/my-work-content.css">
+        <title>@florinchristian.dev</title>
+    </head>
+    <body>
+        <header>
+            <div id="logoContainer">
+                <img src="res/images/me.jpg" alt="A picture of myself">
+                <div id="logoDetails">
+                    <p>&commat;florinchristian.dev</p>
+                    <p class="bolded">Student &amp; Software Engineer</p>
+                </div>
+            </div>
+
+            <nav>
+                <ul>
+                    <li ><a class="navButton" href="#">Home</a></li>
+                    <li><a class="navButton" href="#">About me</a></li>
+                    <li class="selected"><a class="navButton" href="#">My work</a></li>
+                    <li><a class="navButton" href="#">Contact Me</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="dynamicContentContainer">
+            <div id="home-content" class="dynamic-content">
+                <p>Left blank on purpose (writer behaviour or something)</p>
+            </div>
+
+            <div id="about-me-content" class="dynamic-content">
+                <div id="text-section">
+                    <h1>About me</h1>
+
+                    <div id="paragraphContainer">
+                        <p>Hello there! My name is Florin Cristi Gheorghe. I am a 19 years old student and programming enthusiast from Craiova, Romania.</p>
+
+                        <p>Since I was 10 years old I was passionate about computers and technology, not only playing computer games but also knowing how to solve computers' software problems and even creating my own apps and games.</p>
+
+                        <p>My journey to programming began in highschool, when I attended my first competitive programming contests in my city and online. Hyped up, I began researching on real world programming, like websites, mobile apps and desktop apps...</p>
+
+                        <p>Finally, I have landed on my first software engineering job @ <a target="_blank" href="https://www.netromsoftware.ro/">NetRom Software</a> after two years of working on my skills.</p>
+                    </div>
+                </div>
+
+                <div id="image-gallery">
+                    <img src="res/images/my-country.png" alt="I live in Craiova, Romania">
+                    <img src="res/images/my-university.png" alt="I study at 'Faculty of Automation, Computers and Electronics'">
+                    <img src="res/images/my-workplace.jpg" alt="I work @ NetRom Software">
+                </div>
+            </div>
+
+            <div id="my-work-content" class="dynamic-content selected">
+                <h1>My work</h1>
+
+                <p>During 2019-2022 I have attented the following competitive programming contests:</p>
+                <ul>
+                    <li>County Olympiad in Informatics 2019</li>
+                    <li>County Olympiad in Informatics 2020</li>
+                    <li>International Informatics Olympiad in Teams (first 4 phases, 2019 - 2020)</li>
+                    <li>County Olympiad in Informatics 2022</li>
+                    <li>Cloudfight Coding Contest 2022</li>
+                </ul>
+
+                
+            </div>
+
+            <div id="contact-me-content" class="dynamic-content">
+                <h1>Contact me</h1>
+            </div>
+        </div>
+
+        <script src="scripts/navigation-behaviour.js"></script>
+
+        <footer>
+            <p>Copyright &copy; &commat;florinchristian.dev 2023</p>
+        </footer>
+    </body>
+</html>

@@ -1,0 +1,17 @@
+#my-work-content {
+  display: flex;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  flex-direction: column;
+  color: white;
+  font-family: Metropolis;
+}
+#my-work-content h1 {
+  font-family: Metropolis;
+  font-weight: bold;
+}
+#my-work-content p {
+  margin: 15px 0;
+}
+
+/*# sourceMappingURL=my-work-content.css.map */

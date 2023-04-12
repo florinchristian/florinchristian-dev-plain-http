@@ -1,0 +1,143 @@
+@use 'fonts';
+
+@mixin glassEffect($borderRadius) {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.19);
+    border-radius: $borderRadius;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(4.8px);
+    -webkit-backdrop-filter: blur(4.8px);
+    border: 1px solid rgba(255, 255, 255, 0.63);
+}
+
+$gradientColor1: #AD1DEB;
+$gradientColor2: #6E72FC;
+
+$logoImgSize: 50px;
+
+$dynamicContentHeight: 80%;
+
+* {
+    margin: 0;
+}
+
+.bolded {
+    font-weight: bold;
+}
+
+body {
+    background-image: linear-gradient($gradientColor1, $gradientColor2);
+    background-repeat: no-repeat;
+
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+    height: calc(calc(100% - $dynamicContentHeight) / 2);
+
+    padding: 10px 40px;
+
+    box-sizing: border-box;
+
+    #logoContainer {
+        display: flex;
+
+        img {
+            min-width: $logoImgSize;
+            min-height: $logoImgSize;
+
+            max-width: $logoImgSize;
+            max-height: $logoImgSize;
+
+            border-radius: $logoImgSize;
+            border: 1.5px solid white;
+
+            margin-right: 10px;
+    
+            object-fit: cover;
+        }
+
+        #logoDetails {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            flex-direction: column;
+
+            p {
+                color: white;
+                font-family: Metropolis;
+                text-align: center;
+            }
+        }
+    }
+
+    nav {
+        ul {
+            li {
+                display: block;
+                float: left;
+
+                margin-left: 20px;
+
+                border: 1px solid transparent;
+
+                a {
+                    display: block;
+
+                    font-family: Metropolis;
+
+                    text-decoration: none;
+                    color: white;
+
+                    padding: 10px 20px;
+                    box-sizing: border-box;
+                }
+            }
+
+            li:hover, li.selected {
+                @include glassEffect(50px);
+            }
+        }
+    }
+}
+
+#dynamicContentContainer {
+    width: 100%;
+    height: $dynamicContentHeight;
+
+    .dynamic-content {
+        width: 100%;
+        height: 100%;
+
+        display: none;
+
+        &.selected {
+            display: flex;
+        }
+    }
+}
+
+footer {
+    width: 100%;
+    height: (100% - $dynamicContentHeight) / 2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        color: white;
+        font-family: Metropolis;
+        font-weight: lighter;
+    }
+}

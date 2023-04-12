@@ -1,0 +1,209 @@
+@font-face {
+  font-family: Metropolis;
+  src: url(/res/fonts/Metropolis/Metropolis-Black.otf);
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: Metropolis;
+  src: url(/res/fonts/Metropolis/Metropolis-BlackItalic.otf);
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: Metropolis;
+  src: url(/res/fonts/Metropolis/Metropolis-Bold.otf);
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face {
+  font-family: Metropolis;
+  src: url(/res/fonts/Metropolis/Metropolis-BoldItalic.otf);
+  font-weight: bold;
+  font-style: italic;
+}
+@font-face {
+  font-family: Metropolis;
+  src: url(/res/fonts/Metropolis/Metropolis-ExtraBold.otf);
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: Metropolis;
+  src: url(/res/fonts/Metropolis/Metropolis-ExtraBoldItalic.otf);
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: Metropolis;
+  src: url(/res/fonts/Metropolis/Metropolis-ExtraLight.otf);
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: Metropolis;
+  src: url(/res/fonts/Metropolis/Metropolis-ExtraLightItalic.otf);
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: Metropolis;
+  src: url(/res/fonts/Metropolis/Metropolis-Light.otf);
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: Metropolis;
+  src: url(/res/fonts/Metropolis/Metropolis-LightItalic.otf);
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: Metropolis;
+  src: url(/res/fonts/Metropolis/Metropolis-Medium.otf);
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Metropolis;
+  src: url(/res/fonts/Metropolis/Metropolis-MediumItalic.otf);
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: Metropolis;
+  src: url(/res/fonts/Metropolis/Metropolis-Regular.otf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: Metropolis;
+  src: url(/res/fonts/Metropolis/Metropolis-RegularItalic.otf);
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: Metropolis;
+  src: url(/res/fonts/Metropolis/Metropolis-SemiBold.otf);
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: Metropolis;
+  src: url(/res/fonts/Metropolis/Metropolis-SemiBoldItalic.otf);
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: Metropolis;
+  src: url(/res/fonts/Metropolis/Metropolis-Thin.otf);
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: Metropolis;
+  src: url(/res/fonts/Metropolis/Metropolis-ThinItalic.otf);
+  font-weight: 100;
+  font-style: italic;
+}
+* {
+  margin: 0;
+}
+
+.bolded {
+  font-weight: bold;
+}
+
+body {
+  background-image: linear-gradient(#AD1DEB, #6E72FC);
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  padding: 10px 40px;
+  box-sizing: border-box;
+}
+header #logoContainer {
+  display: flex;
+}
+header #logoContainer img {
+  min-width: 50px;
+  min-height: 50px;
+  max-width: 50px;
+  max-height: 50px;
+  border-radius: 50px;
+  border: 1.5px solid white;
+  margin-right: 10px;
+  object-fit: cover;
+}
+header #logoContainer #logoDetails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+header #logoContainer #logoDetails p {
+  color: white;
+  font-family: Metropolis;
+  text-align: center;
+}
+header nav ul li {
+  display: block;
+  float: left;
+  margin-left: 20px;
+  border: 1px solid transparent;
+}
+header nav ul li a {
+  display: block;
+  font-family: Metropolis;
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+header nav ul li:hover, header nav ul li.selected {
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.19);
+  border-radius: 50px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.8px);
+  -webkit-backdrop-filter: blur(4.8px);
+  border: 1px solid rgba(255, 255, 255, 0.63);
+}
+
+#dynamicContentContainer {
+  width: 100%;
+  height: 80%;
+}
+#dynamicContentContainer .dynamic-content {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+#dynamicContentContainer .dynamic-content.selected {
+  display: flex;
+}
+
+footer {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer p {
+  color: white;
+  font-family: Metropolis;
+  font-weight: lighter;
+}
+
+/*# sourceMappingURL=base.css.map */
